@@ -63,7 +63,7 @@ namespace DataBase
                 MySqlCommand jobCreate = new MySqlCommand(tbJobs, con);
                 jobCreate.ExecuteNonQuery();
 				//creating appointment table
-				String tbAppoint ="create NOT EXISTS table Appointment(AppointmentID int(20) primary key not null auto_increment, status varchar(10),requestedBy varchar(30) not null,DateOfRequest varchar(11) not null )";
+				String tbAppoint = "create table IF NOT EXISTS  Appointment(AppointmentID int(20) primary key not null auto_increment, status varchar(10),requestedBy varchar(30) not null,DateOfRequest varchar(11) not null )";
 				MySqlCommand appointCreate = new MySqlCommand(tbAppoint,con);
 				appointCreate.ExecuteNonQuery();
                // DataTable t = con.GetSchema("Tables");
