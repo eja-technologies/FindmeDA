@@ -62,6 +62,10 @@ namespace DataBase
                     "JobTitle varchar(20) not null,Qualification varchar(20) not null,Status varchar(20) not null,AdvertisedBy varchar(30) not null)";
                 MySqlCommand jobCreate = new MySqlCommand(tbJobs, con);
                 jobCreate.ExecuteNonQuery();
+				//creating appointment table
+				String tbAppoint ="create NOT EXISTS table Appointment(AppointmentID int(20) primary key not null auto_increment, status varchar(10),requestedBy varchar(30) not null,DateOfRequest varchar(11) not null )";
+				MySqlCommand appointCreate = new MySqlCommand(tbAppoint,con);
+				appointCreate.ExecuteNonQuery();
                // DataTable t = con.GetSchema("Tables");
                 MessageBox.Show("Database "+con.Database+" has been successfully created. You can now check Your sql Server for the tables.");
                 con.Close();
