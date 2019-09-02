@@ -20,11 +20,31 @@ namespace FindMe
     /// </summary>
     public partial class MainWindow : Window
     {
+        //string page_title;
+        //default contents
+        private readonly FrameworkElement _submenuView;
+        private readonly FrameworkElement _bodyView;
+        public static readonly DependencyProperty page_titleProperty =
+            DependencyProperty.Register("page_title", typeof(string), typeof(MainWindow), new UIPropertyMetadata(string.Empty));
+
         public MainWindow()
         {
             InitializeComponent();
+            //this.DataContext = this;
+
+            //page_title = "SignIn";
+            _submenuView = new SignIn();
+            _bodyView = new SignIn();
+            //pageTitle.DataContext = page_title;
+            this.page_title = "Muwonge";
+            mainbody.Children.Add(_bodyView); // set the default view
         }
 
+        public string page_title
+        {
+            get { return (string)GetValue(page_titleProperty); }
+            set { SetValue(page_titleProperty, value); }
+        }
         
         
         private void btn_log_in(object sender, RoutedEventArgs e)
@@ -37,7 +57,8 @@ namespace FindMe
             SignIn si = new SignIn();
             mainbody.Children.Clear();
             mainbody.Children.Add(si);
-            sub_menu.Children.Clear();
+            //sub_menu.Children.Clear();
+            page_title = "SignIn";
 
         }
         private void SignUp_click(object sender, RoutedEventArgs e)
@@ -45,13 +66,17 @@ namespace FindMe
             Signup su = new Signup();
             mainbody.Children.Clear();
             mainbody.Children.Add(su);
-            sub_menu.Children.Clear();
+            //sub_menu.Children.Clear();
 
         }
 
         private void Jobs_click(object sender, RoutedEventArgs e)
         {
-
+            //MessageBox.Show("You are in Jobs", "Jobs", MessageBoxButton.YesNoCancel, MessageBoxImage.Hand);
+            Jobs jobs = new Jobs();
+            mainbody.Children.Clear();
+            mainbody.Children.Add(jobs);
+            //sub_menu.Children.Clear();
         }
 
         private void Office_click(object sender, RoutedEventArgs e)
