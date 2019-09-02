@@ -8,6 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="0,0,0,-60">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -23,28 +24,28 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Margin="257,0,256,0">
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Margin="257,0,256,0" Name="textblock">
                             Please Fill the form bellow and click SignUp
         </TextBlock>
-        <Label Grid.Column="0" Grid.Row="1" Content="First Name" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox Grid.Column="2" Grid.Row="1" Name="fName" Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="Last Name" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox Grid.Column="2" Grid.Row="2" Name="lName" Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="Username" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox Grid.Column="2" Grid.Row="3" Name="uname" Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="4" Content="Password" FontSize="15" Grid.ColumnSpan="2" />
-        <PasswordBox Grid.Column="2" Grid.Row="4" Name="pass1" Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="5" Content="Comfirm Password" FontSize="15" Grid.ColumnSpan="2" />
-        <PasswordBox Grid.Column="2" Grid.Row="5" Name="pass2"  Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="6" Content="TelePhone" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox Grid.Column="2" Grid.Row="6" Name="phone" Margin="0,3"/>
-        <Label Grid.Column="0" Grid.Row="7" Content="Email" FontSize="15" Grid.ColumnSpan="2" />
-        <TextBox Grid.Column="2" Grid.Row="7" Name="email" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="1" Content="First Name" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox Grid.Column="3" Grid.Row="1" Name="fName" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="Last Name" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox Grid.Column="3" Grid.Row="2" Name="lName" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Username" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox Grid.Column="3" Grid.Row="3" Name="uname" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="4" Content="Password" FontSize="15" Grid.ColumnSpan="2" />
+        <PasswordBox Grid.Column="3" Grid.Row="4" Name="pass1" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="5" Content="Comfirm Password" FontSize="15" Grid.ColumnSpan="2" />
+        <PasswordBox Grid.Column="3" Grid.Row="5" Name="pass2"  Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="6" Content="TelePhone" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox Grid.Column="3" Grid.Row="6" Name="phone" Margin="0,3"/>
+        <Label Grid.Column="1" Grid.Row="7" Content="Email" FontSize="15" Grid.ColumnSpan="2" />
+        <TextBox Grid.Column="3" Grid.Row="7" Name="email" Margin="0,3"/>
         
-        <Button Grid.Column="2" Grid.Row="8" Content="Upload ProfilePicture" HorizontalAlignment="Left" Margin="10,24,0,26" Name="btnBrowse"  Width="123" Click="btnBrowse_photo" RenderTransformOrigin="0.498,1.011" />
+        <Button Grid.Column="3" Grid.Row="8" Content="Upload ProfilePicture" HorizontalAlignment="Left" Margin="10,24,0,26" Name="btnBrowse"  Width="123" Click="btnBrowse_photo" RenderTransformOrigin="0.498,1.011" />
 
-        <Button Grid.Column="2" Grid.Row="8" Content="Sign Up" Width="100" Background="#0066cc" Foreground="AliceBlue" FontSize="16" Margin="219,24,81,26" HorizontalAlignment="Center" Click="btn_Sign_up"/>
-        <Image Grid.ColumnSpan="2" Name="profilePic" HorizontalAlignment="Left" Height="100" Margin="143,0,0,0" Grid.Row="8" VerticalAlignment="Top" Width="100"/>
+        <Button Grid.Column="3" Grid.Row="8" Content="Sign Up" Width="100" Background="#0066cc" Foreground="AliceBlue" FontSize="16" Margin="219,24,81,26" HorizontalAlignment="Center" Click="btn_Sign_up"/>
+        <Image Grid.Column="1" Grid.ColumnSpan="2" Name="profilePic" HorizontalAlignment="Left" Height="100" Margin="143,0,0,0" Grid.Row="8" VerticalAlignment="Top" Width="100"/>
 
 
     </Grid>

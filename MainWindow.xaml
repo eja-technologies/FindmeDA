@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FindMe"
         mc:Ignorable="d"
         Title="FindMe" Height="450" Width="800">
-    <Grid Margin="10,0,10,10" Background="#CCFFFF" ShowGridLines="False">
+    <Grid Margin="10,0,10,10" Background="#CCFFFF" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition MinWidth="350"/>
@@ -38,7 +38,7 @@
                         <DockPanel/>
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
-                <MenuItem Width="100" Header="_Home" Background="#0066cc" Foreground="AliceBlue">
+                <MenuItem Width="100" Header="_Home" Click="Jobs_click" Background="#0066cc" Foreground="AliceBlue">
                     <MenuItem Header="_New" />
                     <MenuItem Header="_Open" />
                     <MenuItem Header="_Save" />
@@ -49,31 +49,38 @@
                 <MenuItem Header="_Jobs" Click="Jobs_click"></MenuItem>
                 <MenuItem Header="_Appointment" Click="Appointment_click"></MenuItem>
                 <MenuItem Header="_Sign In" Click="SignIn_click"></MenuItem>
-                <MenuItem Header="SignUp" Click="SignUp_click"></MenuItem>
+                <MenuItem Header="_SignUp" Click="SignUp_click"></MenuItem>
             </Menu>
         </DockPanel>
+        <!--<Label Name="pageTitle" Grid.Column="1" Grid.Row="2" Content="{Binding Path=Page_title, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc">
+            
+        </Label>-->
+        <TextBox Name="pageTitle" Grid.Column="1" Grid.Row="2" Text="{Binding Path=page_title}" >
+            
+        </TextBox>
 
         <Border Grid.Column="0" Grid.Row="1" Height="35" Padding="5" Background="#4E87D4">
             <Label VerticalAlignment="Center" Foreground="White">Sub Menu</Label>
         </Border>
 
-        <ListBox Name="submenu" Grid.Column="0" Grid.Row="3"  FontWeight="Bold" FontSize="15" Background="#CCFFFF" Foreground="#0066cc">
+        <!--<ListBox Name="submenu" Grid.Column="0" Grid.Row="3"  FontWeight="Bold" FontSize="15" Background="#CCFFFF" Foreground="#0066cc">
             <StackPanel Name="sub_menu" Orientation="Vertical">
                 <ListBoxItem Height="40" Background="#FF6600">Submenu 1</ListBoxItem>
                 <ListBoxItem Height="40">Submenu 2</ListBoxItem>
                 <ListBoxItem Height="40">Submenu 3</ListBoxItem>
                 <ListBoxItem Height="40">Submenu 4</ListBoxItem>
             </StackPanel>
-        </ListBox>
+        </ListBox>-->
 
 
-        <Border Grid.Column="1" Grid.Row="3" Padding="5" Background="#99FFFF" Margin="5,0,0,0">
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Padding="5" Background="#99FFFF" Margin="5,0,0,0">
             <StackPanel Name="mainbody">
-                <Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc">
+                <!--<Label Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc">
                     LogIn
                 </Label>
                 <StackPanel Orientation="Horizontal">
                     <Grid Margin="120,0,0,0">
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"/>
                             <ColumnDefinition Width="200"/>
@@ -83,9 +90,6 @@
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
-
-
-
                         </Grid.RowDefinitions>
                         <Label Grid.Column="0" Grid.Row="0" Content="Username" Width="150" FontSize="15"/>
                         <TextBox Grid.Column="1" Grid.Row="0" Margin="0,3" Name="username"/>
@@ -94,9 +98,8 @@
                         <Button Grid.Column="1" Grid.Row="2" Content="Login" Width="100" Height="30" Background="#0066cc" Foreground="AliceBlue" FontSize="16" Margin="0,20,0,20" HorizontalAlignment="Center" Name="login" Click="btn_log_in"/>
                         <Label Grid.Column="0"  Grid.Row="3" Content="Forgot Password?" FontSize="13"/>
                        
-
                     </Grid>
-                </StackPanel>
+                </StackPanel>-->
             </StackPanel>
         </Border>
         <Border Grid.Column="2" Grid.Row="1" Height="35" Padding="5">
@@ -116,7 +119,7 @@
             <ListBoxItem>Advert 4</ListBoxItem>
         </ListBox>
         <Border Grid.Column="0" Grid.Row="4" Height="35" Padding="5" Background="#4E87D4">
-
+            <Label VerticalAlignment="Center" Foreground="White">Footer</Label>
         </Border>
 
 
