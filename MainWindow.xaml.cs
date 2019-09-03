@@ -24,28 +24,27 @@ namespace FindMe
         {
             InitializeComponent();
         }
-
-        
-        
+        //method for switching user conrols
+        public static void  changeUserControl(StackPanel main, StackPanel sub,UserControl userControl)
+        {
+            main.Children.Clear();
+            main.Children.Add(userControl);
+            sub.Children.Clear();
+        }
         private void btn_log_in(object sender, RoutedEventArgs e)
         {
-
+            
         }
        
         private void SignIn_click(object sender, RoutedEventArgs e)
         {
             SignIn si = new SignIn();
-            mainbody.Children.Clear();
-            mainbody.Children.Add(si);
-            sub_menu.Children.Clear();
-
+            changeUserControl(mainbody,sub_menu,si);
         }
         private void SignUp_click(object sender, RoutedEventArgs e)
         {
             Signup su = new Signup();
-            mainbody.Children.Clear();
-            mainbody.Children.Add(su);
-            sub_menu.Children.Clear();
+            changeUserControl(mainbody, sub_menu, su);
 
         }
 

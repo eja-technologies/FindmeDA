@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FindMe"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="0,0,0,-60">
+    <Grid Margin="0,0,0,-60" Name="signup_grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>

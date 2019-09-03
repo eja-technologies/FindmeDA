@@ -97,7 +97,7 @@ namespace FindMe
                                 //creating table Member
                                 string tbMember = "create table IF NOT EXISTS Member(MemberID int(20) primary key not null auto_increment," +
                                     "fName varchar(15) not null,lName varchar(15) not null,username varchar(15) unique not null," +
-                                    "password varchar(40) unique not null,Telephone varchar(13) not null,email varchar(30) not null," +
+                                    "password varchar(40) not null,Telephone varchar(13) not null,email varchar(30) not null," +
                                     "photo blob, name varchar(100))";
                                 MySqlCommand memberCreate = new MySqlCommand(tbMember, con);
                                 memberCreate.ExecuteNonQuery();
@@ -118,9 +118,20 @@ namespace FindMe
                                 // Inserting form data to table members                          
                                 MySqlCommand insert_member = new MySqlCommand("INSERT INTO member(fName,lName,username,password,Telephone,email,photo,name) VALUES ('" + fname + "','" + lname + "','" + usname + "','" + pass + "','" + tel + "','" + mail + "','" + imgByteArr + "','"+strName+"')", con);
                                 int i = insert_member.ExecuteNonQuery();
-                                if (i >= 1)
+                                if (i == 1)
                                 {
                                     MessageBox.Show("You have successfully Registered. You can now LogIn");
+                                   // Signup su = new Signup();
+                                   /*
+                                    Window window = new Window
+                                    {
+                                        Title = "Second User Control",
+                                        Content = new SignIn(),
+                                        WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                                        ResizeMode = ResizeMode.NoResize
+                                    };
+                                    window.ShowDialog();
+                                    */
                                 }
                                 else
                                 {
@@ -132,7 +143,6 @@ namespace FindMe
                             catch (Exception ex)
                             {
                                 MessageBox.Show(ex.Message);
-
 
                             }
 
