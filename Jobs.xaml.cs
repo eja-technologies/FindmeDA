@@ -24,5 +24,15 @@ namespace FindMe
         {
             InitializeComponent();
         }
+
+        private void btn_log_in(object sender, RoutedEventArgs e)
+        {
+            Signup su = new Signup();
+            MessageBox.Show("You have called another userControl from another", "UserControls", MessageBoxButton.YesNoCancel, MessageBoxImage.Hand);
+            MainWindow mw = Window.GetWindow(this) as MainWindow;
+            mw.mainbody.Children.Clear();
+            mw.mainbody.Children.Add(su);
+
+        }
     }
 }
