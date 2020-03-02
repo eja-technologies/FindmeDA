@@ -39,6 +39,13 @@ namespace FindMe
             this.page_title = "Muwonge";
             mainbody.Children.Add(_bodyView); // set the default view
         }
+        //method for switching user conrols
+        public static void  changeUserControl(StackPanel main, StackPanel sub,UserControl userControl)
+        {
+            main.Children.Clear();
+            main.Children.Add(userControl);
+            sub.Children.Clear();
+        }
 
         public string page_title
         {
@@ -49,7 +56,7 @@ namespace FindMe
         
         private void btn_log_in(object sender, RoutedEventArgs e)
         {
-
+            
         }
        
         private void SignIn_click(object sender, RoutedEventArgs e)

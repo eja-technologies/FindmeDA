@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+<<<<<<< HEAD
+VisualStudioVersion = 15.0.28307.329
+=======
 VisualStudioVersion = 15.0.28307.271
+>>>>>>> a9ad4f26d48f97a3fbd68204b7a4cb3caf73b164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMe", "FindMe.csproj", "{F8060E13-10F2-4A6C-941A-D464381CB031}"
 EndProject
@@ -20,6 +24,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
+		SolutionGuid = {36B15852-B132-43F6-A714-48C3CCFF5439}
+=======
 		SolutionGuid = {7EB3B042-55DC-401F-AF98-4843FE3E9060}
+>>>>>>> a9ad4f26d48f97a3fbd68204b7a4cb3caf73b164
 	EndGlobalSection
 EndGlobal
